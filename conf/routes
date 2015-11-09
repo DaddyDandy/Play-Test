@@ -1,0 +1,15 @@
+# User data collect
+GET         /                    controllers.UserDataController.getCollectDataPage()
+POST        /data/save           controllers.UserDataController.saveUserData()
+
+# Responses
+GET         /responses           controllers.ResponseController.getResponsesList()
+
+# Fields
+GET         /fields              controllers.FieldController.getFieldsList()
+GET         /fields/:uuid        controllers.FieldController.getFieldEditPage(uuid)
+GET         /fields/new          controllers.FieldController.getNewFieldPage()
+POST        /fields/save         controllers.FieldController.saveField()
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)
